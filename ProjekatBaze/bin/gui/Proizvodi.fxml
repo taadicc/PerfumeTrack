@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="gui.ProizvodiController"
+           prefWidth="1100" prefHeight="700">
+
+    <top>
+        <VBox spacing="10" style="-fx-padding: 15; -fx-background-color: #f5f5f5;">
+            <Label text="Pregled proizvoda" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label fx:id="fillijalaLabel" text="Filijala: " style="-fx-font-weight: bold; -fx-font-size: 10px;"/>
+                <TextField fx:id="searchField" promptText="Pretraži proizvode..." prefWidth="250" />
+                <Button text="Pretraži" onAction="#pretraziProizvode" />
+                <Button text="Osveži" onAction="#ucitajProizvode" />
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <TableView fx:id="tabelaProizvoda" style="-fx-padding: 10;" />
+    </center>
+
+    <bottom>
+        <VBox spacing="10" style="-fx-padding: 15; -fx-background-color: #f5f5f5;">
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Dodaj proizvod" onAction="#dodajProizvod"
+                       style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+                <Button text="Proizvodi na promociji" onAction="#prikaziProizvodeNaPromociji"
+                       style="-fx-background-color: #FF9800; -fx-text-fill: white;" />
+                <Button text="Obriši" onAction="#obrisiProizvod"
+                       style="-fx-background-color: #F44336; -fx-text-fill: white;" />
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

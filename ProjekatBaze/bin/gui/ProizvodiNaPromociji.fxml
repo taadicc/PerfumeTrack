@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="gui.ProizvodiNaPromocijiController"
+           prefWidth="900" prefHeight="600">
+
+    <top>
+        <VBox spacing="15" alignment="CENTER" style="-fx-padding: 20; -fx-background-color: #f8f9fa;">
+            <Label text="🎉 Proizvodi na Promociji"
+                   style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #e74c3c;" />
+            <Label fx:id="labelDatum" text="Aktivne promocije za danas:"
+                   style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;" />
+
+            <HBox spacing="15" alignment="CENTER">
+                <Button text="🔄 Osvježi" onAction="#ucitajProizvodeNaPromociji"
+                        style="-fx-font-size: 12px; -fx-padding: 8 16;" />
+                <Button text="🔙 Nazad" onAction="#nazad"
+                        style="-fx-font-size: 12px; -fx-padding: 8 16; -fx-background-color: #95a5a6; -fx-text-fill: white;" />
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="10" style="-fx-padding: 15;">
+            <Label fx:id="labelBrojProizvoda" text="Ukupno proizvoda na promociji: 0"
+                   style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+
+            <TableView fx:id="tabelaPromocija" prefHeight="400">
+                <columns>
+                    <TableColumn fx:id="kolonaNaziv" text="Naziv proizvoda" prefWidth="150" />
+                    <TableColumn fx:id="kolonaOriginalCijena" text="Originalna cijena" prefWidth="120" />
+                    <TableColumn fx:id="kolonaPopust" text="Popust %" prefWidth="80" />
+                    <TableColumn fx:id="kolonaCijenaSaPopustom" text="Cijena sa popustom" prefWidth="130" />
+                    <TableColumn fx:id="kolonaUstedjevina" text="Uštedjevina" prefWidth="100" />
+                    <TableColumn fx:id="kolonaZapremina" text="Zapremina" prefWidth="100" />
+                    <TableColumn fx:id="kolonaNazivPromocije" text="Promocija" prefWidth="120" />
+                    <TableColumn fx:id="kolonaOpisPromocije" text="Opis promocije" prefWidth="150" />
+                    <TableColumn fx:id="kolonaDatumKraja" text="Važi do" prefWidth="100" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+</BorderPane>

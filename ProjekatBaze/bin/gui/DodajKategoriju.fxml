@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="gui.DodajKategorijuController"
+            prefWidth="450" prefHeight="300">
+
+    <top>
+        <VBox spacing="20" style="-fx-padding: 30 30 20 30;">
+            <Label text="Dodaj novu kategoriju"
+                   style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #333;"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="20" style="-fx-padding: 0 30 20 30;">
+            
+            <VBox spacing="8">
+                <Label text="Naziv kategorije:"
+                       style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #555;"/>
+                <TextField fx:id="txtNaziv" promptText="Unesite naziv kategorije"
+                          style="-fx-font-size: 14px; -fx-padding: 8 12;"/>
+            </VBox>
+
+            <HBox spacing="15" alignment="CENTER" style="-fx-padding: 20 0 0 0;">
+                <Button text="Sačuvaj" onAction="#sacuvajKategoriju"
+                        style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20; -fx-background-radius: 4; -fx-font-weight: bold;"/>
+                
+                <Button text="Otkaži" onAction="#otkazi"
+                        style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20; -fx-background-radius: 4; -fx-font-weight: bold;"/>
+            </HBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>

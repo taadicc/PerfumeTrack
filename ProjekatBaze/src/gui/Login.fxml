@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="gui.LoginController"
+    prefWidth="500" prefHeight="600"
+    style="-fx-background-color: linear-gradient(to bottom, #fce4ec, #f8bbd9, #f48fb1);">
+
+    <top>
+        <VBox style="-fx-background-color: rgba(255, 255, 255, 0.3); -fx-padding: 30 40; -fx-border-color: rgba(255, 182, 193, 0.4); -fx-border-width: 0 0 1 0;">
+            <HBox alignment="CENTER" spacing="15">
+                <Label text="🌸" style="-fx-font-size: 26px;"/>
+                <Label text="PRIJAVA U SISTEM"
+                    style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #ad1457; -fx-font-family: 'Georgia', 'Times New Roman', serif; -fx-letter-spacing: 1px;"/>
+                <Label text="🌸" style="-fx-font-size: 26px;"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <StackPane>
+            <HBox alignment="CENTER" spacing="150" opacity="0.05">
+                <Label text="🌺" style="-fx-font-size: 200px; -fx-text-fill: #e91e63;"/>
+                <Label text="🌷" style="-fx-font-size: 180px; -fx-text-fill: #f06292;"/>
+            </HBox>
+            
+            <VBox spacing="25" alignment="CENTER" maxWidth="350" style="-fx-padding: 40;">
+                
+                <VBox alignment="CENTER" spacing="10">
+                    <Label text="Prijava prodavca"
+                        style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #ad1457; -fx-font-family: 'Georgia', 'Times New Roman', serif;"
+                        textAlignment="CENTER"/>
+                    <Label text="Unesite vaše radničke kredencijale"
+                        style="-fx-font-size: 14px; -fx-text-fill: #c2185b; -fx-font-family: 'Palatino Linotype', serif; -fx-font-style: italic;"
+                        textAlignment="CENTER"/>
+                </VBox>
+
+                <Region prefHeight="1" prefWidth="120" 
+                    style="-fx-background-color: linear-gradient(to right, transparent, #e91e63, transparent); -fx-opacity: 0.6;"/>
+
+                <VBox spacing="18" alignment="CENTER">
+                    <VBox spacing="5">
+                        <Label text="Korisničko ime:" 
+                            style="-fx-text-fill: #ad1457; -fx-font-size: 13px; -fx-font-weight: bold; -fx-font-family: 'Georgia', serif;"/>
+                        <TextField fx:id="txtKorisnickoIme" promptText="👤 Unesite korisničko ime"
+                            maxWidth="280" prefHeight="45"
+                            style="-fx-font-size: 14px; -fx-padding: 12; -fx-background-radius: 12; 
+                                   -fx-background-color: rgba(255, 255, 255, 0.8); 
+                                   -fx-border-color: rgba(194, 24, 91, 0.3); -fx-border-width: 1; -fx-border-radius: 12;
+                                   -fx-font-family: 'Palatino Linotype', serif;">
+                            <effect>
+                                <DropShadow color="rgba(194, 24, 91, 0.1)" radius="3" offsetY="1"/>
+                            </effect>
+                        </TextField>
+                    </VBox>
+
+                    <VBox spacing="5">
+                        <Label text="Lozinka:" 
+                            style="-fx-text-fill: #ad1457; -fx-font-size: 13px; -fx-font-weight: bold; -fx-font-family: 'Georgia', serif;"/>
+                        <PasswordField fx:id="txtLozinka" promptText="🔒 Unesite lozinku"
+                            maxWidth="280" prefHeight="45"
+                            style="-fx-font-size: 14px; -fx-padding: 12; -fx-background-radius: 12; 
+                                   -fx-background-color: rgba(255, 255, 255, 0.8); 
+                                   -fx-border-color: rgba(194, 24, 91, 0.3); -fx-border-width: 1; -fx-border-radius: 12;
+                                   -fx-font-family: 'Palatino Linotype', serif;">
+                            <effect>
+                                <DropShadow color="rgba(194, 24, 91, 0.1)" radius="3" offsetY="1"/>
+                            </effect>
+                        </PasswordField>
+                    </VBox>
+                </VBox>
+
+                <Label fx:id="lblRegistrujSe" text="🌸 Nemate nalog? Registrujte se"
+                    style="-fx-text-fill: #c2185b; -fx-font-size: 13px; -fx-underline: true; -fx-cursor: hand; 
+                           -fx-font-family: 'Palatino Linotype', serif; -fx-font-style: italic;"/>
+
+                <Button fx:id="btnPrijaviSe"
+                    text="PRIJAVI SE"
+                    maxWidth="250" prefHeight="50"
+                    style="-fx-background-color: linear-gradient(to right, #e91e63, #f06292); 
+                           -fx-text-fill: white; 
+                           -fx-font-size: 15px; 
+                           -fx-font-weight: bold; 
+                           -fx-background-radius: 25; 
+                           -fx-padding: 15 30; 
+                           -fx-cursor: hand;
+                           -fx-font-family: 'Georgia', serif;
+                           -fx-letter-spacing: 0.8px;">
+                    <effect>
+                        <DropShadow color="rgba(233, 30, 99, 0.4)" radius="10" offsetY="3"/>
+                    </effect>
+                </Button>
+
+                <VBox alignment="CENTER" spacing="8" style="-fx-background-color: rgba(255, 255, 255, 0.25); -fx-background-radius: 12; -fx-padding: 15;">
+                    <Label text="💡 Napomena"
+                        style="-fx-font-size: 12px; -fx-text-fill: #ad1457; -fx-font-weight: bold; -fx-font-family: 'Georgia', serif;"/>
+                    <Label text="   Koristite kredencijale dobijene od menadžera!"
+                        wrapText="true" textAlignment="CENTER"
+                        style="-fx-font-size: 11px; -fx-text-fill: #c2185b; -fx-max-width: 280; -fx-text-alignment: center; -fx-font-family: 'Palatino Linotype', serif;"/>
+                </VBox>
+            </VBox>
+        </StackPane>
+    </center>
+
+    <bottom>
+        <VBox style="-fx-background-color: rgba(255, 255, 255, 0.3); -fx-padding: 20; -fx-border-color: rgba(255, 182, 193, 0.4); -fx-border-width: 1 0 0 0;">
+            <HBox alignment="CENTER" spacing="8">
+                <Label text="🌸" style="-fx-text-fill: #f06292; -fx-font-size: 12px;"/>
+                <Label text="Parfimerija Elegance"
+                    style="-fx-text-fill: #c2185b; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-family: 'Georgia', serif;"/>
+                <Label text="•" style="-fx-text-fill: #f06292; -fx-font-size: 12px;"/>
+                <Label text="Prijava zaposlenog"
+                    style="-fx-text-fill: #c2185b; -fx-font-size: 12px; -fx-font-style: italic; -fx-font-family: 'Palatino Linotype', serif;"/>
+                <Label text="🌸" style="-fx-text-fill: #f06292; -fx-font-size: 12px;"/>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

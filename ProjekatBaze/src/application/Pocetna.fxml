@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="application.PocetnaController"
+    prefWidth="900" prefHeight="600"
+    style="-fx-background-color: linear-gradient(to bottom, #fce4ec, #f8bbd9, #f48fb1);">
+
+    <top>
+        <VBox style="-fx-background-color: rgba(255, 255, 255, 0.3); -fx-padding: 25 40; -fx-border-color: rgba(255, 182, 193, 0.4); -fx-border-width: 0 0 1 0;">
+            <HBox alignment="CENTER" spacing="15">
+                <Label text="🌸" style="-fx-font-size: 24px;"/>
+                <Label text="PARFIMERIJA ELEGANCE"
+                    style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #c2185b; -fx-font-family: 'Georgia', 'Times New Roman', serif; -fx-letter-spacing: 1.5px;"/>
+                <Label text="🌸" style="-fx-font-size: 24px;"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <StackPane>
+            <HBox alignment="CENTER" spacing="100" opacity="0.06">
+                <Label text="🌺" style="-fx-font-size: 120px; -fx-text-fill: #e91e63;"/>
+                <Label text="🌸" style="-fx-font-size: 100px; -fx-text-fill: #f06292;"/>
+                <Label text="🌷" style="-fx-font-size: 110px; -fx-text-fill: #ec407a;"/>
+            </HBox>
+            
+            <VBox fx:id="mainContent" alignment="CENTER" spacing="30" style="-fx-padding: 60 40;">
+                
+                <VBox alignment="CENTER" spacing="15">
+                    <Label fx:id="welcomeLabel" text="Dobrodošli u radni sistem"
+                        style="-fx-font-size: 28px; -fx-text-fill: #ad1457; -fx-font-weight: bold; -fx-font-family: 'Georgia', 'Times New Roman', serif;"
+                        wrapText="true" textAlignment="CENTER"/>
+                    
+                    <Label fx:id="descriptionLabel" 
+                        text="Profesionalna platforma za upravljanje prodajom parfema"
+                        wrapText="true" textAlignment="CENTER"
+                        style="-fx-font-size: 15px; -fx-text-fill: #c2185b; -fx-max-width: 600; -fx-line-spacing: 2px; -fx-font-family: 'Palatino Linotype', 'Book Antiqua', serif;"
+                        alignment="CENTER"/>
+                </VBox>
+
+                <Region prefHeight="1" prefWidth="180" 
+                    style="-fx-background-color: linear-gradient(to right, transparent, #e91e63, transparent); -fx-opacity: 0.6;"/>
+
+                <VBox alignment="CENTER" spacing="20">
+                    <Label text="Prijavite se u sistem"
+                        style="-fx-font-size: 16px; -fx-text-fill: #c2185b; -fx-font-weight: bold; -fx-font-family: 'Georgia', serif;"/>
+                    
+                    <Button fx:id="btnPrijava"
+                        text="PRIJAVA"
+                        style="-fx-background-color: linear-gradient(to right, #e91e63, #f06292); 
+                               -fx-text-fill: white; 
+                               -fx-font-size: 15px; 
+                               -fx-font-weight: bold; 
+                               -fx-background-radius: 25; 
+                               -fx-padding: 12 35; 
+                               -fx-cursor: hand;
+                               -fx-font-family: 'Georgia', serif;
+                               -fx-letter-spacing: 0.5px;">
+                        <effect>
+                            <DropShadow color="rgba(233, 30, 99, 0.3)" radius="8" offsetY="2"/>
+                        </effect>
+                    </Button>
+                </VBox>
+
+                <HBox alignment="CENTER" spacing="50" style="-fx-padding: 25 0 0 0;">
+                    <VBox alignment="CENTER" spacing="8">
+                        <Label text="🌹" style="-fx-font-size: 22px;"/>
+                        <Label text="Upravljanje inventarom" style="-fx-font-size: 11px; -fx-text-fill: #c2185b; -fx-font-weight: bold; -fx-text-alignment: center; -fx-font-family: 'Palatino Linotype', serif;" wrapText="true"/>
+                    </VBox>
+                    <VBox alignment="CENTER" spacing="8">
+                        <Label text="💎" style="-fx-font-size: 22px;"/>
+                        <Label text="Obrada transakcija" style="-fx-font-size: 11px; -fx-text-fill: #c2185b; -fx-font-weight: bold; -fx-text-alignment: center; -fx-font-family: 'Palatino Linotype', serif;" wrapText="true"/>
+                    </VBox>
+                   
+                    <VBox alignment="CENTER" spacing="8">
+                        <Label text="🌸" style="-fx-font-size: 22px;"/>
+                        <Label text="Izvještaji o prodaji" style="-fx-font-size: 11px; -fx-text-fill: #c2185b; -fx-font-weight: bold; -fx-text-alignment: center; -fx-font-family: 'Palatino Linotype', serif;" wrapText="true"/>
+                    </VBox>
+                </HBox>
+
+                <VBox alignment="CENTER" spacing="10" style="-fx-padding: 15 0 0 0; -fx-background-color: rgba(255, 255, 255, 0.25); -fx-background-radius: 15; -fx-padding: 20;">
+                    <Label text="🌺 Napomena za zaposlene 🌺"
+                        style="-fx-font-size: 14px; -fx-text-fill: #ad1457; -fx-font-weight: bold; -fx-font-family: 'Georgia', serif;"/>
+                    <Label text="Koristite svoje radničke kredencijale za pristup sistemu. Za tehnička pitanja kontaktirajte IT podršku."
+                        wrapText="true" textAlignment="CENTER"
+                        style="-fx-font-size: 12px; -fx-text-fill: #c2185b; -fx-max-width: 550; -fx-text-alignment: center; -fx-font-family: 'Palatino Linotype', serif;"/>
+                </VBox>
+            </VBox>
+        </StackPane>
+    </center>
+    
+    <bottom>
+        <VBox style="-fx-background-color: rgba(255, 255, 255, 0.3); -fx-padding: 20; -fx-border-color: rgba(255, 182, 193, 0.4); -fx-border-width: 1 0 0 0;">
+            <HBox alignment="CENTER" spacing="10">
+                <Label text="© 2025 Parfimerija Elegance"
+                    style="-fx-text-fill: #c2185b; -fx-font-size: 11px; -fx-font-weight: bold; -fx-font-family: 'Georgia', serif;"/>
+                <Label text="🌸" style="-fx-text-fill: #f06292; -fx-font-size: 11px;"/>
+                <Label text="Interni sistem za zaposlene"
+                    style="-fx-text-fill: #c2185b; -fx-font-size: 11px; -fx-font-style: italic; -fx-font-family: 'Palatino Linotype', serif;"/>
+                <Label text="🌸" style="-fx-text-fill: #f06292; -fx-font-size: 11px;"/>
+                <Label text="v2.1.0"
+                    style="-fx-text-fill: #c2185b; -fx-font-size: 11px; -fx-font-family: 'Georgia', serif;"/>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

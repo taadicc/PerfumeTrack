@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="gui.KategorijeController"
+            prefWidth="700" prefHeight="500">
+
+    <top>
+        <VBox spacing="15" style="-fx-padding: 20;">
+            <Label text="Lista kategorija"
+                   style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+            
+            <HBox spacing="10" alignment="CENTER_LEFT">
+    <Button text="Dodaj novu kategoriju" onAction="#dodajKategoriju"
+        style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 13px; -fx-padding: 8 16; -fx-background-radius: 4;"/>
+    
+    <Button text="Obriši kategoriju" onAction="#obrisiKategoriju"
+        style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 13px; -fx-padding: 8 16; -fx-background-radius: 4;"/>
+    
+    <Button text="Osvježi" onAction="#ucitajKategorije"
+        style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 13px; -fx-padding: 8 16; -fx-background-radius: 4;"/>
+</HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox style="-fx-padding: 0 20 20 20;">
+            <TableView fx:id="tableKategorije" prefHeight="400">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID kategorije" prefWidth="150"/>
+                    <TableColumn fx:id="colNaziv" text="Naziv kategorije" prefWidth="500"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+</BorderPane>

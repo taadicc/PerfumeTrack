@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="gui.DodajProizvodController"
+      spacing="15" alignment="CENTER" style="-fx-padding: 30; -fx-background-color: #f8f9fa;" 
+      prefWidth="450" prefHeight="500">
+
+    <!-- Naslov -->
+    <Label text="Dodaj novi proizvod" 
+           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2c3e50; -fx-padding: 0 0 10 0;" />
+    
+    <!-- Separator -->
+    <Separator prefWidth="350" style="-fx-background-color: #bdc3c7;" />
+
+    <!-- Forma za unos -->
+    <VBox spacing="12" alignment="CENTER" style="-fx-padding: 20 0 0 0;">
+        
+        <Label text="Naziv proizvoda" style="-fx-font-size: 12px; -fx-text-fill: #34495e; -fx-font-weight: bold;" />
+        <TextField fx:id="nazivField" promptText="Unesite naziv proizvoda" 
+                   prefWidth="300" prefHeight="35" 
+                   style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 8;" />
+
+        <Label text="Brend" style="-fx-font-size: 12px; -fx-text-fill: #34495e; -fx-font-weight: bold;" />
+        <ComboBox fx:id="brendCombo" promptText="Odaberite brend" 
+                  prefWidth="300" prefHeight="35"
+                  style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-radius: 5;" />
+
+        <Label text="Kategorija" style="-fx-font-size: 12px; -fx-text-fill: #34495e; -fx-font-weight: bold;" />
+        <ComboBox fx:id="kategorijaCombo" promptText="Odaberite kategoriju" 
+                  prefWidth="300" prefHeight="35"
+                  style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-radius: 5;" />
+
+        <HBox spacing="15" alignment="CENTER">
+            <VBox spacing="5" alignment="CENTER">
+                <Label text="Cijena" style="-fx-font-size: 12px; -fx-text-fill: #34495e; -fx-font-weight: bold;" />
+                <TextField fx:id="cijenaField" promptText="0.00" 
+                           prefWidth="140" prefHeight="35"
+                           style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 8;" />
+            </VBox>
+            
+            <VBox spacing="5" alignment="CENTER">
+                <Label text="Zapremina (ml)" style="-fx-font-size: 12px; -fx-text-fill: #34495e; -fx-font-weight: bold;" />
+                <TextField fx:id="zapreminaField" promptText="500" 
+                           prefWidth="140" prefHeight="35"
+                           style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 8;" />
+            </VBox>
+        </HBox>
+
+    </VBox>
+
+    <!-- Separator -->
+    <Separator prefWidth="350" style="-fx-background-color: #bdc3c7;" />
+
+    <!-- Dugme za čuvanje -->
+    <Button text="Sačuvaj proizvod" onAction="#sacuvajProizvod" 
+            prefWidth="200" prefHeight="40"
+            style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-radius: 8; -fx-cursor: hand;" />
+
+</VBox>

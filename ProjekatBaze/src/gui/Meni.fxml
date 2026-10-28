@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="gui.MeniController"
+    prefWidth="800" prefHeight="600"
+    style="-fx-background-color: linear-gradient(to bottom, #fce4ec, #f8bbd9, #f48fb1);">
+
+    <top>
+        <VBox style="-fx-background-color: rgba(255, 255, 255, 0.3); -fx-padding: 30 40; -fx-border-color: rgba(255, 182, 193, 0.4); -fx-border-width: 0 0 1 0;">
+          
+            <HBox alignment="CENTER_RIGHT" style="-fx-padding: 0 0 10 0;">
+                <Button fx:id="btnOdjaviSe" text="🚪 ODJAVI SE"
+                    prefWidth="140" prefHeight="35"
+                    style="-fx-background-color: linear-gradient(to right, #c62828, #e53935); 
+                           -fx-text-fill: white; 
+                           -fx-font-size: 12px; 
+                           -fx-font-weight: bold; 
+                           -fx-background-radius: 15; 
+                           -fx-padding: 8 15; 
+                           -fx-cursor: hand;
+                           -fx-font-family: 'Georgia', serif;
+                           -fx-letter-spacing: 0.3px;">
+                    <effect>
+                        <DropShadow color="rgba(198, 40, 40, 0.4)" radius="6" offsetY="2"/>
+                    </effect>
+                </Button>
+            </HBox>
+            
+            <HBox alignment="CENTER" spacing="15">
+                <Label text="🌸" style="-fx-font-size: 28px;"/>
+                <Label text="GLAVNI MENI"
+                    style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #ad1457; -fx-font-family: 'Georgia', 'Times New Roman', serif; -fx-letter-spacing: 1.5px;"/>
+                <Label text="🌸" style="-fx-font-size: 28px;"/>
+            </HBox>
+            <HBox alignment="CENTER" spacing="8" style="-fx-padding: 8 0 0 0;">
+                <Label text="✨" style="-fx-text-fill: #f06292; -fx-font-size: 14px;"/>
+                <Label text="Parfimerija Elegance"
+                    style="-fx-text-fill: #c2185b; -fx-font-size: 16px; -fx-font-weight: bold; -fx-font-family: 'Georgia', serif;"/>
+                <Label text="✨" style="-fx-text-fill: #f06292; -fx-font-size: 14px;"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <StackPane>
+            <HBox alignment="CENTER" spacing="200" opacity="0.04">
+                <VBox alignment="CENTER" spacing="80">
+                    <Label text="🌺" style="-fx-font-size: 120px; -fx-text-fill: #e91e63;"/>
+                    <Label text="🌷" style="-fx-font-size: 100px; -fx-text-fill: #f06292;"/>
+                </VBox>
+                <VBox alignment="CENTER" spacing="80">
+                    <Label text="🌸" style="-fx-font-size: 110px; -fx-text-fill: #ec407a;"/>
+                    <Label text="🌹" style="-fx-font-size: 90px; -fx-text-fill: #f8bbd9;"/>
+                </VBox>
+            </HBox>
+            
+            <VBox alignment="CENTER" spacing="30" style="-fx-padding: 40;">
+                
+                <VBox alignment="CENTER" spacing="10">
+                    <Label text="Izaberite opciju"
+                        style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #ad1457; -fx-font-family: 'Georgia', 'Times New Roman', serif;"
+                        textAlignment="CENTER"/>
+                    <Label text="Upravljanje parfimerijom"
+                        style="-fx-font-size: 14px; -fx-text-fill: #c2185b; -fx-font-family: 'Palatino Linotype', serif; -fx-font-style: italic;"
+                        textAlignment="CENTER"/>
+                </VBox>
+
+                <Region prefHeight="1" prefWidth="200" 
+                    style="-fx-background-color: linear-gradient(to right, transparent, #e91e63, transparent); -fx-opacity: 0.6;"/>
+
+                <GridPane alignment="CENTER" hgap="25" vgap="20" maxWidth="600">
+                    
+                    <Button fx:id="btnProizvodi" text="PROIZVODI"
+                        GridPane.columnIndex="0" GridPane.rowIndex="0"
+                        prefWidth="280" prefHeight="65"
+                        style="-fx-background-color: linear-gradient(to right, #e91e63, #f06292); 
+                               -fx-text-fill: white; 
+                               -fx-font-size: 16px; 
+                               -fx-font-weight: bold; 
+                               -fx-background-radius: 20; 
+                               -fx-padding: 15 25; 
+                               -fx-cursor: hand;
+                               -fx-font-family: 'Georgia', serif;
+                               -fx-letter-spacing: 0.5px;">
+                        <effect>
+                            <DropShadow color="rgba(233, 30, 99, 0.4)" radius="8" offsetY="3"/>
+                        </effect>
+                    </Button>
+
+                    <Button fx:id="btnBrendovi" text="BRENDOVI"
+                        GridPane.columnIndex="1" GridPane.rowIndex="0"
+                        prefWidth="280" prefHeight="65"
+                        style="-fx-background-color: linear-gradient(to right, #e91e63, #f06292); 
+                               -fx-text-fill: white; 
+                               -fx-font-size: 16px; 
+                               -fx-font-weight: bold; 
+                               -fx-background-radius: 20; 
+                               -fx-padding: 15 25; 
+                               -fx-cursor: hand;
+                               -fx-font-family: 'Georgia', serif;
+                               -fx-letter-spacing: 0.5px;">
+                        <effect>
+                            <DropShadow color="rgba(233, 30, 99, 0.4)" radius="8" offsetY="3"/>
+                        </effect>
+                    </Button>
+
+                    <Button fx:id="btnKategorije" text="KATEGORIJE"
+                        GridPane.columnIndex="0" GridPane.rowIndex="1"
+                        prefWidth="280" prefHeight="65"
+                        style="-fx-background-color: linear-gradient(to right, #e91e63, #f06292); 
+                               -fx-text-fill: white; 
+                               -fx-font-size: 16px; 
+                               -fx-font-weight: bold; 
+                               -fx-background-radius: 20; 
+                               -fx-padding: 15 25; 
+                               -fx-cursor: hand;
+                               -fx-font-family: 'Georgia', serif;
+                               -fx-letter-spacing: 0.5px;">
+                        <effect>
+                            <DropShadow color="rgba(233, 30, 99, 0.4)" radius="8" offsetY="3"/>
+                        </effect>
+                    </Button>
+
+                    <Button fx:id="btnProdaja" text="PRODAJA"
+                        GridPane.columnIndex="1" GridPane.rowIndex="1"
+                        prefWidth="280" prefHeight="65"
+                        style="-fx-background-color: linear-gradient(to right, #e91e63, #f06292); 
+                               -fx-text-fill: white; 
+                               -fx-font-size: 16px; 
+                               -fx-font-weight: bold; 
+                               -fx-background-radius: 20; 
+                               -fx-padding: 15 25; 
+                               -fx-cursor: hand;
+                               -fx-font-family: 'Georgia', serif;
+                               -fx-letter-spacing: 0.5px;">
+                        <effect>
+                            <DropShadow color="rgba(233, 30, 99, 0.4)" radius="8" offsetY="3"/>
+                        </effect>
+                    </Button>
+
+                    <Button fx:id="btnKreirajRacun" text="📄 KREIRANJE RAČUNA"
+                        GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2"
+                        prefWidth="580" prefHeight="65"
+                        style="-fx-background-color: linear-gradient(to right, #c2185b, #e91e63); 
+                               -fx-text-fill: white; 
+                               -fx-font-size: 16px; 
+                               -fx-font-weight: bold; 
+                               -fx-background-radius: 20; 
+                               -fx-padding: 15 25; 
+                               -fx-cursor: hand;
+                               -fx-font-family: 'Georgia', serif;
+                               -fx-letter-spacing: 0.5px;">
+                        <effect>
+                            <DropShadow color="rgba(194, 24, 91, 0.4)" radius="8" offsetY="3"/>
+                        </effect>
+                    </Button>
+                </GridPane>
+
+                <VBox alignment="CENTER" spacing="10" style="-fx-background-color: rgba(255, 255, 255, 0.25); -fx-background-radius: 15; -fx-padding: 20; -fx-max-width: 500;">
+                    <HBox alignment="CENTER" spacing="8">
+                        <Label text="💡" style="-fx-font-size: 16px;"/>
+                        <Label text="Navigacija kroz sistem"
+                            style="-fx-font-size: 14px; -fx-text-fill: #ad1457; -fx-font-weight: bold; -fx-font-family: 'Georgia', serif;"/>
+                    </HBox>
+                    <Label text="Kliknite na bilo koju opciju da pristupite odgovarajućoj funkcionalnosti sistema."
+                        wrapText="true" textAlignment="CENTER"
+                        style="-fx-font-size: 12px; -fx-text-fill: #c2185b; -fx-text-alignment: center; -fx-font-family: 'Palatino Linotype', serif;"/>
+                </VBox>
+            </VBox>
+        </StackPane>
+    </center>
+
+    <bottom>
+        <VBox style="-fx-background-color: rgba(255, 255, 255, 0.3); -fx-padding: 20; -fx-border-color: rgba(255, 182, 193, 0.4); -fx-border-width: 1 0 0 0;">
+            <HBox alignment="CENTER" spacing="12">
+                <Label text="🌸" style="-fx-text-fill: #f06292; -fx-font-size: 14px;"/>
+                <Label text="Parfimerija Elegance"
+                    style="-fx-text-fill: #c2185b; -fx-font-size: 14px; -fx-font-weight: bold; -fx-font-family: 'Georgia', serif;"/>
+                <Label text="•" style="-fx-text-fill: #f06292; -fx-font-size: 14px;"/>
+                <Label text="Glavni meni sistema"
+                    style="-fx-text-fill: #c2185b; -fx-font-size: 14px; -fx-font-style: italic; -fx-font-family: 'Palatino Linotype', serif;"/>
+                <Label text="•" style="-fx-text-fill: #f06292; -fx-font-size: 14px;"/>
+                <Label text="Elegantno upravljanje"
+                    style="-fx-text-fill: #c2185b; -fx-font-size: 14px; -fx-font-family: 'Palatino Linotype', serif;"/>
+                <Label text="🌸" style="-fx-text-fill: #f06292; -fx-font-size: 14px;"/>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+	fx:controller="gui.ProdajaController" prefWidth="1000" prefHeight="700"
+	style="-fx-background-color: #f5f5f5;">
+
+	<top>
+		<VBox spacing="10" style="-fx-padding: 20;">
+			<Label text="Pregled prodaja"
+				style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+
+			<HBox spacing="30" alignment="CENTER_LEFT"
+				style="-fx-padding: 10 0 10 0;">
+				<Label fx:id="filijalaLabel" text="Filijala: ..."
+					style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+				<Label fx:id="korisnikLabel" text="Korisnik: ..."
+					style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;" />
+			</HBox>
+
+			<!-- Tabovi za različite prikaze -->
+			<TabPane fx:id="glavniTabPane"
+				style="-fx-background-color: white;">
+				<Tab text="Pojedinačne prodaje" fx:id="pojedinacneTab"
+					closable="false">
+					<VBox spacing="10" style="-fx-padding: 10;">
+						<HBox spacing="15" alignment="CENTER_LEFT"
+							style="-fx-padding: 10 0 10 0;">
+							<Label text="Filter:"
+								style="-fx-font-size: 14px; -fx-text-fill: #2c3e50;" />
+
+							<Label text="Od:"
+								style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;" />
+							<DatePicker fx:id="datumOdPicker"
+								style="-fx-font-size: 14px;" />
+
+							<Label text="Do:"
+								style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;" />
+							<DatePicker fx:id="datumDoPicker"
+								style="-fx-font-size: 14px;" />
+
+							<Button fx:id="filterButton" text="Pretraži"
+								style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;" />
+
+							<Button fx:id="resetFilterButton" text="Resetuj"
+								style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-weight: bold;" />
+						</HBox>
+						<Separator style="-fx-background-color: #bdc3c7;" />
+					</VBox>
+				</Tab>
+
+				<Tab text="Mjesečni pregled" fx:id="mjesecniTab"
+					closable="false">
+					<VBox spacing="10" style="-fx-padding: 10;">
+						<HBox spacing="15" alignment="CENTER_LEFT"
+							style="-fx-padding: 10 0 10 0;">
+							<Label text="Filter po godini:"
+								style="-fx-font-size: 14px; -fx-text-fill: #2c3e50;" />
+
+							<ComboBox fx:id="godinaComboBox" promptText="Sve godine"
+								style="-fx-font-size: 14px;" prefWidth="120" />
+
+							<Label text="Mjesec:"
+								style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;" />
+							<ComboBox fx:id="mjesecComboBox"
+								promptText="Svi mjeseci" style="-fx-font-size: 14px;"
+								prefWidth="120" />
+
+							<Button fx:id="filterMjesecniButton" text="Primeni filter"
+								style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;" />
+
+							<Button fx:id="resetMjesecniButton" text="Resetuj filtere"
+								style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-weight: bold;" />
+						</HBox>
+						<Separator style="-fx-background-color: #bdc3c7;" />
+					</VBox>
+				</Tab>
+			</TabPane>
+		</VBox>
+	</top>
+
+	<center>
+		<StackPane>
+			<!-- Prikaz za pojedinačne prodaje -->
+			<ScrollPane fx:id="pojedinacneScrollPane"
+				fitToWidth="true" fitToHeight="true"
+				style="-fx-background-color: transparent; -fx-padding: 10;">
+				<VBox fx:id="prodajeBox" spacing="20" style="-fx-padding: 10;" />
+			</ScrollPane>
+
+			<!-- Prikaz za mjesečni pregled -->
+			<ScrollPane fx:id="mjesecniScrollPane" fitToWidth="true"
+				fitToHeight="true"
+				style="-fx-background-color: transparent; -fx-padding: 10;"
+				visible="false">
+				<VBox fx:id="mjesecniBox" spacing="20" style="-fx-padding: 10;" />
+			</ScrollPane>
+		</StackPane>
+	</center>
+
+	<bottom>
+		<HBox alignment="CENTER_RIGHT" spacing="15"
+			style="-fx-padding: 20;">
+			<!-- Statistike za pojedinačne prodaje -->
+			<VBox fx:id="pojedinacneStatsBox" spacing="5"
+				alignment="CENTER_RIGHT">
+				<Label fx:id="ukupnoLabel" text="Ukupno prodaja: 0"
+					style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #27ae60;" />
+				<Label fx:id="ukupanIznosLabel" text="Ukupan iznos: 0.00 KM"
+					style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #e74c3c;" />
+			</VBox>
+
+			<!-- Statistike za mjesečni pregled -->
+			<VBox fx:id="mjesecneStatsBox" spacing="5"
+				alignment="CENTER_RIGHT" visible="false">
+				<Label fx:id="ukupnoMjesecnoLabel" text="Ukupno mjeseci: 0"
+					style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #27ae60;" />
+				<Label fx:id="ukupanIznosMjesecnoLabel"
+					text="Ukupan iznos: 0.00 KM"
+					style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #e74c3c;" />
+				<Label fx:id="prosjekMjesecnoLabel"
+					text="Prosjek po mjesecu: 0.00 KM"
+					style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #3498db;" />
+			</VBox>
+		</HBox>
+	</bottom>
+
+</BorderPane>
